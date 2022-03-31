@@ -1,0 +1,106 @@
+{
+  "version": "13.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "DynamodbStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://234177478365/us-west-2",
+      "properties": {
+        "templateFile": "DynamodbStack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/DynamodbStack/Table": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "TableCD117FA1"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/jsii-kernel-Rnzdg8/node_modules/@aws-cdk/core/lib/construct-compat.js:405:62)",
+              "new Table (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/jsii-kernel-Rnzdg8/node_modules/@aws-cdk/aws-dynamodb/lib/table.js:483:23)",
+              "/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:8154:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:8582:24)",
+              "Kernel._create (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:8154:34)",
+              "Kernel.create (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:9443:46)",
+              "processImmediate (internal/timers.js:464:21)"
+            ]
+          }
+        ],
+        "/DynamodbStack/Table/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TableCD117FA1",
+            "trace": [
+              "new Table (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/jsii-kernel-Rnzdg8/node_modules/@aws-cdk/aws-dynamodb/lib/table.js:456:22)",
+              "/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:8154:58",
+              "Kernel._wrapSandboxCode (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:8582:24)",
+              "Kernel._create (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:8154:34)",
+              "Kernel.create (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:7895:29)",
+              "KernelHost.processRequest (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:9443:46)",
+              "processImmediate (internal/timers.js:464:21)"
+            ]
+          }
+        ],
+        "/DynamodbStack/dynamoDBDump": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "Add statement to this resource's role: {\"action\":[\"dynamodb:BatchGetItem\",\"dynamodb:GetRecords\",\"dynamodb:GetShardIterator\",\"dynamodb:Query\",\"dynamodb:GetItem\",\"dynamodb:Scan\",\"dynamodb:ConditionCheckItem\",\"dynamodb:BatchWriteItem\",\"dynamodb:PutItem\",\"dynamodb:UpdateItem\",\"dynamodb:DeleteItem\"],\"notAction\":[],\"principal\":{},\"notPrincipal\":{},\"resource\":[{\"Fn::GetAtt\":[\"TableCD117FA1\",\"Arn\"]},{\"Ref\":\"AWS::NoValue\"}],\"notResource\":[],\"condition\":{},\"effect\":\"Allow\"}",
+            "trace": [
+              "Annotations.addMessage (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/jsii-kernel-Rnzdg8/node_modules/@aws-cdk/core/lib/annotations.js:94:42)",
+              "Annotations.addWarning (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/jsii-kernel-Rnzdg8/node_modules/@aws-cdk/core/lib/annotations.js:37:14)",
+              "UnknownPrincipal.addToPrincipalPolicy (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/jsii-kernel-Rnzdg8/node_modules/@aws-cdk/aws-iam/lib/unknown-principal.js:51:46)",
+              "Function.addToPrincipal (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/jsii-kernel-Rnzdg8/node_modules/@aws-cdk/aws-iam/lib/grant.js:90:65)",
+              "Table.combinedGrant (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/jsii-kernel-Rnzdg8/node_modules/@aws-cdk/aws-dynamodb/lib/table.js:384:35)",
+              "Table.grantReadWriteData (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/jsii-kernel-Rnzdg8/node_modules/@aws-cdk/aws-dynamodb/lib/table.js:173:21)",
+              "/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:7970:134",
+              "Kernel._wrapSandboxCode (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:8582:24)",
+              "/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:7970:107",
+              "Kernel._ensureSync (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:8563:28)",
+              "Kernel.invoke (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:7970:34)",
+              "KernelHost.processRequest (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:9443:46)",
+              "processImmediate (internal/timers.js:464:21)"
+            ]
+          }
+        ],
+        "/DynamodbStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/jsii-kernel-Rnzdg8/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/jsii-kernel-Rnzdg8/node_modules/@aws-cdk/core/lib/private/synthesis.js:139:9",
+              "visit (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/jsii-kernel-Rnzdg8/node_modules/@aws-cdk/core/lib/private/synthesis.js:200:9)",
+              "visit (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/jsii-kernel-Rnzdg8/node_modules/@aws-cdk/core/lib/private/synthesis.js:197:9)",
+              "injectMetadataResources (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/jsii-kernel-Rnzdg8/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:5)",
+              "Object.synthesize (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/jsii-kernel-Rnzdg8/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/jsii-kernel-Rnzdg8/node_modules/@aws-cdk/core/lib/stage.js:100:41)",
+              "/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:7970:134",
+              "Kernel._wrapSandboxCode (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:8582:24)",
+              "/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:7970:107",
+              "Kernel._ensureSync (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:8563:28)",
+              "Kernel.invoke (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:7970:34)",
+              "KernelHost.processRequest (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:9479:36)",
+              "KernelHost.run (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:9442:22)",
+              "Immediate._onImmediate (/private/var/folders/5_/2z9ny5950t57nyvwn68j6pg00000gn/T/tmp1puxyih1/lib/program.js:9443:46)",
+              "processImmediate (internal/timers.js:464:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "DynamodbStack"
+    }
+  }
+}

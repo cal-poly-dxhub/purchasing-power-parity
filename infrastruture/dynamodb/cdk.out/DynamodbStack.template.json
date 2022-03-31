@@ -1,0 +1,45 @@
+{
+  "Resources": {
+    "TableCD117FA1": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "KeySchema": [
+          {
+            "AttributeName": "query",
+            "KeyType": "HASH"
+          },
+          {
+            "AttributeName": "category",
+            "KeyType": "RANGE"
+          }
+        ],
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "query",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "category",
+            "AttributeType": "S"
+          }
+        ],
+        "BillingMode": "PAY_PER_REQUEST",
+        "TableName": "product-data"
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "DynamodbStack/Table/Resource"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Analytics": "v2:deflate64:H4sIAAAAAAAAEzWLywrCMBBFv6X7dGoR6lYsuJbWH5gkI8Y2M5AHUkL+Xaq4uofDuT30/QkOzRnfsTV26YqRQFDmhGZRE0XJwZAahWMK2SQ1Pvhvq9pPxW6MXqyGcke90l58oaoVvbYI18wmOeELRqpV3bb0FO6OMMDQvKJzbcicnCeYfvsBwq88LJQAAAA="
+      },
+      "Metadata": {
+        "aws:cdk:path": "DynamodbStack/CDKMetadata/Default"
+      }
+    }
+  }
+}
